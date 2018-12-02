@@ -1,0 +1,60 @@
+CACHE MANIFEST
+
+CACHE:
+/semantic.js
+/main.js
+/typescript.js
+/marked/marked.min.js
+/highlight.js/highlight.pack.js
+/lzma/lzma_worker-min.js
+/fuse.min.js
+/jquery.js
+/pxtlib.js
+/pxtcompiler.js
+/pxtblocks.js
+/pxtwinrt.js
+/pxteditor.js
+/pxtsim.js
+/blockly.css
+/semantic.css
+/rtlsemantic.css
+/custom.css
+/icons.css
+
+
+
+
+# blockly
+/blockly/blockly_compressed.js
+/blockly/blocks_compressed.js
+/blockly/msg/js/en.js
+/blockly/media/sprites.png
+/blockly/media/click.mp3
+/blockly/media/disconnect.wav
+/blockly/media/delete.mp3
+
+# monaco; keep in sync with webapp/public/index.html
+/vs/loader.js
+/vs/base/worker/workerMain.js
+/vs/basic-languages/src/bat.js
+/vs/basic-languages/src/cpp.js
+/vs/editor/editor.main.css
+/vs/editor/editor.main.js
+/vs/editor/editor.main.nls.js
+/vs/language/json/jsonMode.js
+/vs/language/json/jsonWorker.js
+/vs/language/typescript/lib/typescriptServices.js
+/vs/language/typescript/src/mode.js
+/vs/language/typescript/src/worker.js
+
+# ai
+https://az416426.vo.msecnd.net/scripts/a/ai.0.js
+
+/worker.js
+# ver Thu Jun 28 2018 13:22:09 GMT+0800 (GMT+08:00)
+@monacoworkerjs@
+
+/target.js
+  
+NETWORK:
+*

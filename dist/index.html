@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-manifest="" data-framework="typescript">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+    
+<!-- include appmeta.html -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<title>编程屋体验版</title>
+<meta name="description" content="A Blocks / JavaScript code editor for the micro:bit powered by Microsoft MakeCode." />
+<link rel="manifest" href="/sim.webmanifest">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="编程屋体验版">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
+<meta name="application-name" content="编程屋体验版">
+<meta name="apple-itunes-app" content="app-id=1092687276"/>
+<meta name="msapplication-TileColor" content="#5C005C">
+<meta name="msapplication-TileImage" content="data:image/png;base64,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">
+<meta name="msapplication-config" content="/static/icons/browserconfig.xml">
+<meta name="theme-color" content="#5C005C">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="编程屋体验版" />
+<meta name="twitter:description" content="A Blocks / JavaScript code editor for the micro:bit powered by Microsoft MakeCode." />
+<meta name="twitter:image" content="data:image/png;base64,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" />
+
+<meta property="og:title" content="编程屋体验版" />
+<meta property="og:site_name" content="编程屋体验版" />
+<meta property="og:description" content="A Blocks / JavaScript code editor for the micro:bit powered by Microsoft MakeCode." />
+<meta property="og:image" content="data:image/png;base64,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" />
+
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="shortcut icon" href="data:image/png;base64,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">
+
+<!-- end include appmeta.html -->
+
+
+    <link rel="stylesheet" data-rtl="/rtlsemantic.css" href="/semantic.css" type="text/css">
+    <link id="blocklycss" rel="stylesheet" data-rtl="/rtlblockly.css" href="/blockly.css" type="text/css">
+    <style type="text/css">
+        @import "/custom.css";
+        @import "/icons.css";
+    </style>
+</head>
+
+<body class="main">
+    <div id='loading' class="ui active dimmer">
+        <div class="ui large loader"></div>
+    </div>
+
+    <div id='content' class="ui dimmable full-abs">
+    </div>
+
+    <div id='msg' aria-live="polite">
+        <div id='errmsg' class="ui red inverted segment"></div>
+        <div id='warnmsg' class="ui orange inverted segment"></div>
+        <div id='infomsg' class="ui teal inverted segment"></div>
+        <div id='compilemsg' class="ui ignored info message"></div>
+    </div>
+
+    <script>
+        // This line gets patched up by the cloud
+        var pxtConfig = {
+    "relprefix": "/",
+    "workerjs": "/worker.js",
+    "tdworkerjs": "/tdworker.js",
+    "monacoworkerjs": "/monacoworker.js",
+    "pxtVersion": "0.13.30",
+    "pxtRelId": "",
+    "pxtCdnUrl": "/",
+    "commitCdnUrl": "/",
+    "blobCdnUrl": "/",
+    "cdnUrl": "/",
+    "targetVersion": "0.0.0",
+    "targetRelId": "",
+    "targetUrl": "",
+    "simUrl": "/simulator.html",
+    "partsUrl": "/siminstructions.html",
+    "runUrl": "/run.html",
+    "docsUrl": "/docs.html",
+    "isStatic": true
+};
+    </script>
+    
+<!-- include apptracking.html -->
+
+<!-- include tracking.html -->
+<script type="text/javascript">
+    var appInsights=window.appInsights||function(config){
+        function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({    
+        instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+        disableAjaxTracking: true,
+        overridePageViewDuration: false,
+        disableExceptionTracking: true,
+        isCookieUseDisabled: true,
+        isStorageUseDisabled: true
+    });
+    window.appInsights=appInsights;
+    appInsights.queue.push(function () {
+        appInsights.context.addTelemetryInitializer(function (envelope) {
+            if (typeof pxtConfig === "undefined") return;            
+            var telemetryItem = envelope.data.baseData;
+            telemetryItem.properties = telemetryItem.properties || {};
+            telemetryItem.properties["target"] = pxtConfig.targetId;
+            telemetryItem.properties["version"] = pxtConfig.targetVersion; 
+            telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+            if (typeof window !== "undefined" && window.location && /[?&]electron=1/i.test(window.location.href))
+                telemetryItem.properties["electron"] = 1;
+            if (typeof Windows !== "undefined")
+                telemetryItem.properties["WindowsApp"] = 1;
+        });
+    });
+    appInsights.trackPageView(null, null, {urlReferrer: document.referrer});
+</script>
+<!-- end include tracking.html -->
+
+
+<!-- end include apptracking.html -->
+
+    <!-- patch to load JS in electron -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script type="text/javascript" src="/jquery.js"></script>
+    <script type="text/javascript" src="/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="/blockly/msg/js/en.js"></script>
+    <script type="text/javascript" src="/semantic.js"></script>
+    <!-- unpatch to load JS in electron -->
+    <script>if (window.module) module = window.module;</script>
+
+    <script type="text/javascript" src="/pxtlib.js"></script>
+    <script type="text/javascript" src="/pxtblocks.js"></script>
+    <script type="text/javascript" src="/pxtwinrt.js"></script>
+    <script type="text/javascript" src="/pxteditor.js"></script>
+    <script type="text/javascript" src="/pxtsim.js"></script>
+    <script type="text/javascript" src="/target.js"></script>
+    <script id="mainscript" type="text/javascript" src="/main.js"></script>
+    <xml id="blocklyToolboxDefinitionCategory" style="display: none">
+        <!-- An empty category is required so that Blockly launches in category mode -->
+        <category name="">
+        </category>
+    </xml>
+    <xml id="blocklyToolboxDefinitionFlyout" style="display: none">
+    </xml>
+    <script>
+        // Before loading vs/editor/editor.main, define a global MonacoEnvironment that overwrites
+        // the default worker url location (used when creating WebWorkers). The problem here is that
+        // HTML5 does not (yet) allow cross-domain web workers, so we need to proxy the instantion of
+        // a web worker through a same-domain script
+        window.MonacoEnvironment = {
+            getWorkerUrl: function(workerId, label) {
+                return pxt.webConfig.monacoworkerjs;
+            }
+        };
+
+        // this get rewritten to blob URLs with SHAs while uploading to the cloud
+        // keep in sync with release.manifest
+        window.MonacoPaths = {
+            "vs/loader": "/vs/loader.js",
+            "vs/base/worker/workerMain": "/vs/base/worker/workerMain.js",
+            "vs/basic-languages/src/bat": "/vs/basic-languages/src/bat.js",
+            "vs/basic-languages/src/cpp": "/vs/basic-languages/src/cpp.js",
+            "vs/editor/editor.main.css": "/vs/editor/editor.main.css",
+            "vs/editor/editor.main": "/vs/editor/editor.main.js",
+            "vs/editor/editor.main.nls": "/vs/editor/editor.main.nls.js",
+            "vs/language/json/jsonMode": "/vs/language/json/jsonMode.js",
+            "vs/language/json/jsonWorker": "/vs/language/json/jsonWorker.js",
+            "vs/language/typescript/lib/typescriptServices": "/vs/language/typescript/lib/typescriptServices.js",
+            "vs/language/typescript/src/mode": "/vs/language/typescript/src/mode.js",
+            "vs/language/typescript/src/worker": "/vs/language/typescript/src/worker.js",
+            "lzma/lzma_worker-min.js": "/lzma/lzma_worker-min.js"
+        }
+    </script>
+</body>
+
+</html>

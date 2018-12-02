@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>编程屋体验版 - 编程屋</title>
+    <meta name="Description" content="Maker Project for Guitar Body for micro:bit" />
+
+    
+<!-- include meta.html -->
+<!-- This file is typically overriden by the target, with own Twitter
+     account etc. Most data is taken from the theme file though.  
+  -->
+
+<!-- include robotsmeta.html -->
+
+<!-- end include robotsmeta.html -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@msmakecode" />
+<meta name="twitter:title" content="编程屋体验版 - 编程屋" />
+<meta name="twitter:description" content="Maker Project for Guitar Body for micro:bit" />
+<meta name="twitter:image" content="https://img.youtube.com/vi/xMSrWaOZkFg/maxresdefault.jpg" />
+
+<meta property="og:title" content="编程屋体验版 - 编程屋" />
+<meta property="og:site_name" content="Microsoft MakeCode" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Maker Project for Guitar Body for micro:bit" />
+<meta property="fb:app_id" content="" />
+<meta property="og:image" content="https://img.youtube.com/vi/xMSrWaOZkFg/maxresdefault.jpg" />
+
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAAAAAAYplnuAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfgChQCADRta0mQAAAE/UlEQVR42u3bW0gUURgH8PGyVkimUttVMqXAypIwxAzDoB7Egl567kGlC2F0o3qoMAospDclk7ToQhAIGYaIWSakD+oiBUUlaNCNzCzJ2lpPjZY0850ze2bndk58/9f95pyfyzg756YQCaN4DUC0yEE0ohEtQBCNaEQLEEQjGtECBNGIRrQAQTSiES1AEI1oRAsQRCMa0QIE0YhGtABBtLjo0NueOzUnS4tyc6wmt6j0ZM2dnrchZ9FjjSWpsYrdiU0taRxzCP2hflu87eC/id9W/8F29FBlfoxj4snE5FcO2Ykeq0h0WDyZxAqu24QHHapLcYWsJqWO49+SA92U6RpZTWaTdXRvgatkNQW9FtFXprluVpRpl62gQ4c9IKs5GIoY/bnII7OiFI5EiO5f4ZlZUTKeR4S+P9tDs6IktUSAbvZ5av79StJoGv0s0WOzosx8YhI9vMxr8u+kD5lC/9zkNXgiG3+YQe8N215UwiyrSYgK28tuE+gLRg35i6saugaDxHqCg10NVcVzjTqr5ka3sx8caQcemh4dhUmo4+BSZn++B5zoEPNHZfVdm8F/07KG1eXyn3zoS4zrU6+OO2QmZPzaEkavtVzosUXUi2MrvjtGVvO9gj5kXviVB32Wem1yq6NkNa3J1J7PcKA/JtGuzHjhuJmQFxm0rhPAMB2iD9Eu3DzC1avVjGymdV4WFv1qOuWyrFFXzISMZlF6j+sPh95Huco/4JKZkAE/pf9d4dCLKX9ph2tmQjriIGC+7lGrR/dQ/tAaF82E1FAEncbo4/CKta6aCVkLCUeN0avhFW0uo9sgYYUhuh9eUOiymZBCiND+SujQ50F5dJ/r6L5ooKg0Qm8Q4IumfdX5BuhPcA76Ir3doea6wA9iIeNPr9/qZ3x2EShiPrHRAXh3vKM0GjyRrn42Y317pOSXRTPVFpK2v6Z9+g7eHwE2ugkU51Ha7J16xETvN7VWMpXqqXWQ5Bu0z/OAQzP/q0XXguJzsMX7/w7GciO5RzTD5tOUgnPAoRkKaNHloLgTNDiapik4Zd7cqhmF+wKwohM4ytnonaB4EDS4R1vg6zVr/pKqbSELDuwHgWMnG71VXxsFGhzV/5PsMIuu13cCR8tBMCOylY3O1tfOAe2160syzaLBRFA5rJmjr8lmoxfoa1eB5ir1JTFw4GmcdfoWtsCaVfqaBWw0eJctAM0Vg9vtsUk0mPZeCmvA6lScpW8ajNU9/6Y57ulW4e5pjqfHsL7E86cHz3Nad1N7/5zm+UX8rO3T+19ErnePNsHePfje8npWTt3yZWYfHZOx9S0vAIqp79PfjkzspYjLjnhS0s73af6Ry/u7l7otTf3aN3KRcowo52hcynkPKWeY5JzLk3LWVMr5aTlXAqRcc5FydUvOdUQpV2y9WhsPWlobZ+5CSLvh3C4EcjOd0SvfLgSD/R7Z9xwit+ewuuTd72G0sybjyCO7v+7xzmMrmf1x76wJs4dpXkn17e43dmwKCr3pvl1dMs+oM/49TDy7xXz+uVbjD7/H0sxuMTn35Um5A1LOvaZy7uqVc/+0nDvV5TwTIOfpCyLlORci54kiIuXZLSLnKTki5XlENRKe/JyIfGds/9wm0p1m/hPpzo0LEkQjGtECBNGIRrQAQTSiES1AEI1oRAsQRCMa0QIE0YhGtABBNKIRLUAQjWhECxBEI/p/Q/8CGHHKBbBSRXAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMTAtMjBUMDI6MDA6NTIrMDI6MDCs+cxDAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTEwLTIwVDAyOjAwOjUyKzAyOjAw3aR0/wAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==">
+<meta name="theme-color" content="#5C005C">
+
+<!-- end include meta.html -->
+
+    
+<!-- include head.html -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+<link rel="stylesheet" href="/semantic.css" />
+<link rel="stylesheet" href="/blockly.css" />
+<link rel="stylesheet" href="/docfiles/style.css" />
+<link rel="stylesheet" href="/docfiles/vs.css" />
+<link rel="stylesheet" href="/docfiles/target.css" />
+
+<script src="/jquery.js"></script>
+
+<script src="/embed.js" type="text/javascript"></script>
+<script src="/docfiles/docs.js" type="text/javascript"></script>
+<script src="/docfiles/target.js" type="text/javascript"></script>
+
+<style>
+    
+.ui.accent { color: #5C005C; }
+.ui.inverted.accent { background: #5C005C; }
+#accessibleMenu a { background: #5C005C; }
+
+</style>
+
+<!-- end include head.html -->
+
+
+</head>
+
+<body id='root' class='root'>
+
+<div id="accessibleMenu" role="menubar">
+    
+            <a href="#maincontent" class="ui item link" tabindex="0" role="menuitem">Skip to main content</a>
+        
+</div>
+
+
+<!-- include tocheader.html -->
+<div class="ui vertical accent inverted sidebar menu left hideprint">
+    <div class="item">
+        <a href="/docs/.html" class="header focused" tabindex="0" title="Go to editor">
+            <img aria-hidden="true" role="presentation" class="ui mini image" src="data:image/svg+xml;base64,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" />
+        </a>
+        &nbsp; &nbsp;
+        Documentation
+    </div>
+    <div class="item">
+        <form id="tocsearch1" role="form" method="get" action="https://www.bing.com/search">
+            <div class="ui fluid icon input">
+                <input type="hidden" name="q1" value="site:https://makecode.microbit.org/" />
+                
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch1').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+            </div>
+        </form>
+    </div>
+    <!-- TOC Menu -->
+    
+    <a class="item " href="https://support.microbit.org/" role="menuitem">Support</a>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/projects.html" role="menu">Projects</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/projects/flashing-heart.html" role="menuitem">Flashing heart</a>
+
+
+    <a class="item " href="/docs/projects/smiley-buttons.html" role="menuitem">Smiley buttons</a>
+
+
+    <a class="item " href="/docs/projects/love-meter.html" role="menuitem">Love meter</a>
+
+
+    <a class="item " href="/docs/projects/rock-paper-scissors.html" role="menuitem">Rock paper scissors</a>
+
+
+    <a class="item " href="/docs/projects/magic-button-trick.html" role="menuitem">Magic button trick</a>
+
+
+    <a class="item " href="/docs/projects/coin-flipper.html" role="menuitem">Coin Flipper</a>
+
+
+    <a class="item " href="/docs/projects/hack-your-headphones.html" role="menuitem">Hack your headphones</a>
+
+
+    <a class="item " href="/docs/projects/banana-keyboard.html" role="menuitem">Banana keyboard</a>
+
+
+    <a class="item " href="/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/docs/projects/wallet.html" role="menuitem">Duct tape wallet</a>
+
+
+    <a class="item " href="/docs/projects/watch.html" role="menuitem">Watch</a>
+
+
+    <a class="item " href="/docs/projects/soil-moisture.html" role="menuitem">Soil Moisture</a>
+
+
+    <a class="item " href="/docs/projects/plant-watering.html" role="menuitem">Plant Watering</a>
+
+
+    <a class="item " href="/docs/projects/reaction-time.html" role="menuitem">Reaction Time</a>
+
+
+    <a class="item " href="/docs/projects/states-of-matter.html" role="menuitem">States of Matter</a>
+
+
+    <a class="item " href="/docs/projects/hot-or-cold.html" role="menuitem">Hot Or Cold</a>
+
+
+    <a class="item " href="/docs/projects/voting-machine.html" role="menuitem">Voting Machine</a>
+
+
+    <a class="item " href="/docs/projects/infection.html" role="menuitem">Infection</a>
+
+
+    <a class="item " href="/docs/projects/fireflies.html" role="menuitem">Fireflies</a>
+
+
+    <a class="item " href="/docs/projects/rps-teams.html" role="menuitem">Rock Paper Scissors Teams</a>
+
+
+    <a class="item " href="/docs/projects/inchworm.html" role="menuitem">Inchworm</a>
+
+
+    <a class="item " href="/docs/projects/milk-carton-robot.html" role="menuitem">Milk Carton Robot</a>
+
+
+    <a class="item " href="/docs/projects/milky-monster.html" role="menuitem">Milk monster</a>
+
+
+    <a class="item " href="/docs/projects/rc-car.html" role="menuitem">RC Car</a>
+
+
+    <a class="item " href="/docs/projects/timing-gates.html" role="menuitem">Timing gates</a>
+
+
+    <a class="item " href="/docs/projects/compass.html" role="menuitem">Compass</a>
+
+
+    <a class="item " href="/docs/projects/telegraph.html" role="menuitem">Telegraph</a>
+
+
+    <a class="item " href="/docs/projects/railway-crossing.html" role="menuitem">Railway Crossing</a>
+
+
+    <a class="item " href="/docs/projects/karel.html" role="menuitem">Karel</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/examples.html" role="menu">Examples</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/docs/examples/name-tag.html" role="menuitem">Name tag</a>
+
+
+    <a class="item " href="/docs/examples/rando.html" role="menuitem">Rando</a>
+
+
+    <a class="item " href="/docs/examples/plot-acceleration.html" role="menuitem">Plot acceleration</a>
+
+
+    <a class="item " href="/docs/examples/plot-light-level.html" role="menuitem">Plot light level</a>
+
+
+    <a class="item " href="/docs/examples/plot-analog-pin.html" role="menuitem">Plot analog pin</a>
+
+
+    <a class="item " href="/docs/examples/servo-calibrator.html" role="menuitem">Servo Calibrator</a>
+
+
+    <a class="item " href="/docs/examples/gameofLife.html" role="menuitem">Game of Life</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/courses.html" role="menu">Courses</a>
+        <div class="menu">
+            
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro.html">CS Intro</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/docs/courses/csintro/introduction.html" role="menuitem">Introduction</a>
+
+
+    <a class="item " href="/docs/courses/csintro/references.html" role="menuitem">References</a>
+
+
+    <a class="item " href="/docs/courses/csintro/acknowledgements.html" role="menuitem">Acknowledgements</a>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/making.html">Making</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/making/introduction.html" role="menuitem">Introduction</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/activity.html" role="menuitem">Walkthrough</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/algorithms.html">Algorithms</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/algorithms/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/variables/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/conditionals.html">Conditionals</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/conditionals/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/iteration.html">Iteration</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/iteration/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/miniproject.html">Mini-project</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/miniproject/review.html" role="menuitem">Review</a>
+
+
+    <a class="item " href="/docs/courses/csintro/miniproject/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/miniproject/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/miniproject/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/coordinates.html">Coordinates</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/coordinates/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/booleans.html">Booleans</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/booleans/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/binary.html">Binary</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/binary/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/radio.html">Radio</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/radio/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/arrays.html">Arrays</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/arrays/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/finalproject.html">Final Project</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/finalproject/review.html" role="menuitem">Review</a>
+
+
+    <a class="item " href="/docs/courses/csintro/finalproject/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/finalproject/examples.html" role="menuitem">Examples</a>
+
+
+    <a class="item " href="/docs/courses/csintro/finalproject/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/reference.html" role="menu">Reference</a>
+        <div class="menu">
+            
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/basic.html">Basic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/basic/show-number.html" role="menuitem">show number</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-icon.html" role="menuitem">show icon</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-leds.html" role="menuitem">show leds</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-string.html" role="menuitem">show string</a>
+
+
+    <a class="item " href="/docs/reference/basic/clear-screen.html" role="menuitem">clear screen</a>
+
+
+    <a class="item " href="/docs/reference/basic/forever.html" role="menuitem">forever</a>
+
+
+    <a class="item " href="/docs/reference/basic/pause.html" role="menuitem">pause</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-arrow.html" role="menuitem">show arrow</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-animation.html" role="menuitem">show animation</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/input.html">Input</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/input/on-button-pressed.html" role="menuitem">on button pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/on-gesture.html" role="menuitem">on gesture</a>
+
+
+    <a class="item " href="/docs/reference/input/on-pin-pressed.html" role="menuitem">on pin pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/button-is-pressed.html" role="menuitem">button is pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/compass-heading.html" role="menuitem">compass heading</a>
+
+
+    <a class="item " href="/docs/reference/input/pin-is-pressed.html" role="menuitem">pin is pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/temperature.html" role="menuitem">temperature</a>
+
+
+    <a class="item " href="/docs/reference/input/acceleration.html" role="menuitem">acceleration</a>
+
+
+    <a class="item " href="/docs/reference/input/light-level.html" role="menuitem">light level</a>
+
+
+    <a class="item " href="/docs/reference/input/rotation.html" role="menuitem">rotation</a>
+
+
+    <a class="item " href="/docs/reference/input/magnetic-force.html" role="menuitem">magnetic force</a>
+
+
+    <a class="item " href="/docs/reference/input/running-time.html" role="menuitem">running time</a>
+
+
+    <a class="item " href="/docs/reference/input/set-accelerometer-range.html" role="menuitem">set accelerometer range</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/music.html">Music</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/music/play-tone.html" role="menuitem">play tone</a>
+
+
+    <a class="item " href="/docs/reference/music/ring-tone.html" role="menuitem">ring tone</a>
+
+
+    <a class="item " href="/docs/reference/music/rest.html" role="menuitem">rest</a>
+
+
+    <a class="item " href="/docs/reference/music/beat.html" role="menuitem">beat</a>
+
+
+    <a class="item " href="/docs/reference/music/tempo.html" role="menuitem">tempo</a>
+
+
+    <a class="item " href="/docs/reference/music/change-tempo-by.html" role="menuitem">change tempo by</a>
+
+
+    <a class="item " href="/docs/reference/music/set-tempo.html" role="menuitem">set tempo</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/led.html">Led</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/led/plot.html" role="menuitem">plot</a>
+
+
+    <a class="item " href="/docs/reference/led/unplot.html" role="menuitem">unplot</a>
+
+
+    <a class="item " href="/docs/reference/led/point.html" role="menuitem">point</a>
+
+
+    <a class="item " href="/docs/reference/led/toggle.html" role="menuitem">toggle</a>
+
+
+    <a class="item " href="/docs/reference/led/brightness.html" role="menuitem">brightness</a>
+
+
+    <a class="item " href="/docs/reference/led/set-brightness.html" role="menuitem">set brightness</a>
+
+
+    <a class="item " href="/docs/reference/led/stop-animation.html" role="menuitem">stop animation</a>
+
+
+    <a class="item " href="/docs/reference/led/plot-bar-graph.html" role="menuitem">plot bar graph</a>
+
+
+    <a class="item " href="/docs/reference/led/enable.html" role="menuitem">enable</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/radio.html">Radio</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/radio/send-number.html" role="menuitem">send number</a>
+
+
+    <a class="item " href="/docs/reference/radio/send-value.html" role="menuitem">send value</a>
+
+
+    <a class="item " href="/docs/reference/radio/send-string.html" role="menuitem">send string</a>
+
+
+    <a class="item " href="/docs/reference/radio/on-data-packet-received.html" role="menuitem">on data packet received</a>
+
+
+    <a class="item " href="/docs/reference/radio/set-group.html" role="menuitem">set group</a>
+
+
+    <a class="item " href="/docs/reference/radio/set-transmit-power.html" role="menuitem">set transmit power</a>
+
+
+    <a class="item " href="/docs/reference/radio/set-transmit-serial-number.html" role="menuitem">set transmit serial number</a>
+
+
+    <a class="item " href="/docs/reference/radio/write-received-packet-to-serial.html" role="menuitem">write received packet to serial</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/game.html">Game</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/game/create-sprite.html" role="menuitem">create sprite</a>
+
+
+    <a class="item " href="/docs/reference/game/delete.html" role="menuitem">delete</a>
+
+
+    <a class="item " href="/docs/reference/game/move.html" role="menuitem">move</a>
+
+
+    <a class="item " href="/docs/reference/game/turn.html" role="menuitem">turn</a>
+
+
+    <a class="item " href="/docs/reference/game/if-on-edge-bounce.html" role="menuitem">in on edge bounce</a>
+
+
+    <a class="item " href="/docs/reference/game/get.html" role="menuitem">get</a>
+
+
+    <a class="item " href="/docs/reference/game/set.html" role="menuitem">set</a>
+
+
+    <a class="item " href="/docs/reference/game/change.html" role="menuitem">change</a>
+
+
+    <a class="item " href="/docs/reference/game/is-touching.html" role="menuitem">is touching</a>
+
+
+    <a class="item " href="/docs/reference/game/is-touching-edge.html" role="menuitem">is touching edge</a>
+
+
+    <a class="item " href="/docs/reference/game/add-score.html" role="menuitem">add score</a>
+
+
+    <a class="item " href="/docs/reference/game/score.html" role="menuitem">score</a>
+
+
+    <a class="item " href="/docs/reference/game/set-score.html" role="menuitem">set score</a>
+
+
+    <a class="item " href="/docs/reference/game/start-countdown.html" role="menuitem">start countdown</a>
+
+
+    <a class="item " href="/docs/reference/game/game-over.html" role="menuitem">game over</a>
+
+
+    <a class="item " href="/docs/reference/game/pause.html" role="menuitem">pause</a>
+
+
+    <a class="item " href="/docs/reference/game/resume.html" role="menuitem">resume</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/images.html">Images</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/images/create-image.html" role="menuitem">create image</a>
+
+
+    <a class="item " href="/docs/reference/images/create-big-image.html" role="menuitem">create big image</a>
+
+
+    <a class="item " href="/docs/reference/images/show-image.html" role="menuitem">show image</a>
+
+
+    <a class="item " href="/docs/reference/images/scroll-image.html" role="menuitem">scroll image</a>
+
+
+    <a class="item " href="/docs/reference/images/arrow-image.html" role="menuitem">arrow image</a>
+
+
+    <a class="item " href="/docs/reference/images/icon-image.html" role="menuitem">icon image</a>
+
+
+    <a class="item " href="/docs/reference/images/arrow-number.html" role="menuitem">arrow number</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/pins.html">Pins</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/pins/digital-read-pin.html" role="menuitem">digital read pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/digital-write-pin.html" role="menuitem">digital write pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-read-pin.html" role="menuitem">analog read pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-write-pin.html" role="menuitem">analog write pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-set-period.html" role="menuitem">analog set period</a>
+
+
+    <a class="item " href="/docs/reference/pins/map.html" role="menuitem">map</a>
+
+
+    <a class="item " href="/docs/reference/pins/on-pulsed.html" role="menuitem">on pulsed</a>
+
+
+    <a class="item " href="/docs/reference/pins/pulse-duration.html" role="menuitem">pulse duration</a>
+
+
+    <a class="item " href="/docs/reference/pins/pulse-in.html" role="menuitem">pulse in</a>
+
+
+    <a class="item " href="/docs/reference/pins/servo-write-pin.html" role="menuitem">servo write pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/servo-set-pulse.html" role="menuitem">servo set pulse</a>
+
+
+    <a class="item " href="/docs/reference/pins/i2c-read-number.html" role="menuitem">i2c read number</a>
+
+
+    <a class="item " href="/docs/reference/pins/i2c-write-number.html" role="menuitem">i2c write number</a>
+
+
+    <a class="item " href="/docs/reference/pins/set-pull.html" role="menuitem">set pull</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-pitch.html" role="menuitem">analog pitch</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-set-pitch-pin.html" role="menuitem">analog set pitch pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-write.html" role="menuitem">spi write</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-pins.html" role="menuitem">spi Pins</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-format.html" role="menuitem">spi format</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-frequency.html" role="menuitem">spi frequency</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/serial.html">Serial</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/serial/write-line.html" role="menuitem">write line</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-number.html" role="menuitem">write number</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-value.html" role="menuitem">write value</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-string.html" role="menuitem">write string</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-until.html" role="menuitem">read until</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-line.html" role="menuitem">read line</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-string.html" role="menuitem">read string</a>
+
+
+    <a class="item " href="/docs/reference/serial/on-data-received.html" role="menuitem">on data received</a>
+
+
+    <a class="item " href="/docs/reference/serial/redirect-to.html" role="menuitem">redirect</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-buffer.html" role="menuitem">write buffer</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-buffer.html" role="menuitem">read buffer</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/control.html">Control</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/control/in-background.html" role="menuitem">in background</a>
+
+
+    <a class="item " href="/docs/reference/control/reset.html" role="menuitem">reset</a>
+
+
+    <a class="item " href="/docs/reference/control/wait-micros.html" role="menuitem">wait micros</a>
+
+
+    <a class="item " href="/docs/reference/control/on-event.html" role="menuitem">on event</a>
+
+
+    <a class="item " href="/docs/reference/control/raise-event.html" role="menuitem">raise event</a>
+
+
+    <a class="item " href="/docs/reference/control/event-timestamp.html" role="menuitem">event timestamp</a>
+
+
+    <a class="item " href="/docs/reference/control/event-value.html" role="menuitem">event value</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/bluetooth.html">Bluetooth</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="" role="menuitem"></a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/bluetooth-pairing.html" role="menuitem">Pairing</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/on-bluetooth-connected.html" role="menuitem">on bluetooth connected</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/on-bluetooth-disconnected.html" role="menuitem">on bluetooth disconnected</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-accelerometer-service.html" role="menuitem">start accelerometer service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-button-service.html" role="menuitem">start button service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-io-pin-service.html" role="menuitem">start io pin service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-led-service.html" role="menuitem">start led service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-magnetometer-service.html" role="menuitem">start magnetometer service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-temperature-service.html" role="menuitem">start temperature service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-uart-service.html" role="menuitem">start uart service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-read-until.html" role="menuitem">uart read until</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-write-string.html" role="menuitem">uart write string</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-write-number.html" role="menuitem">uart write number</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-write-value.html" role="menuitem">uart write value</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/advertise-url.html" role="menuitem">advertise url</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/stop-advertising.html" role="menuitem">stop advertising</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/advertise-uid.html" role="menuitem">advertise uid</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/advertise-uid-buffer.html" role="menuitem">advertise-uid-buffer</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/devices.html">Devices</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/devices/tell-camera-to.html" role="menuitem">tell camera to</a>
+
+
+    <a class="item " href="/docs/reference/devices/tell-remote-control-to.html" role="menuitem">tell remote control to</a>
+
+
+    <a class="item " href="/docs/reference/devices/raise-alert-to.html" role="menuitem">raise alert to</a>
+
+
+    <a class="item " href="/docs/reference/devices/on-notified.html" role="menuitem">on notified</a>
+
+
+    <a class="item " href="/docs/reference/devices/on-gamepad-button.html" role="menuitem">on gamepad button</a>
+
+
+    <a class="item " href="/docs/reference/devices/signal-strength.html" role="menuitem">signal strength</a>
+
+
+    <a class="item " href="/docs/reference/devices/on-signal-strength-changed.html" role="menuitem">on signal strength changed</a>
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/packages.html" role="menu">Packages</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/pkg/microsoft/pxt-neopixel.html" role="menuitem">NeoPixel</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-filesystem.html" role="menuitem">File System</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-sonar.html" role="menuitem">Sonar</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-bluetooth-temperature-sensor.html" role="menuitem">Bluetooth Temperature Sensor</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-max6675.html" role="menuitem">MAX6675</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-bluetooth-max6675.html" role="menuitem">Bluetooth MAX6675</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-midi.html" role="menuitem">MIDI</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-bluetooth-midi.html" role="menuitem">Bluetooth MIDI</a>
+
+
+    <a class="item " href="/docs/pkg/CoderDojoOlney/pxt-olney.html" role="menuitem">Code Dojo Olney</a>
+
+
+    <a class="item " href="/docs/pkg/chevyng/pxt-ucl-junkrobot.html" role="menuitem">UCL Junk Robot</a>
+
+
+    <a class="item " href="/docs/pkg/srs/pxt-bitbot.html" role="menuitem">SRS BitBot</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/blocks.html" role="menu">Blocks</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/javascript.html" role="menu">JavaScript</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/types.html" role="menu">Types</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/device.html" role="menu">Hardware</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/device/error-codes.html" role="menuitem">Error codes</a>
+
+
+    <a class="item " href="/docs/device/foil-circuits.html" role="menuitem">Foil circuits</a>
+
+
+    <a class="item " href="/docs/device/mes-events.html" role="menuitem">MES events</a>
+
+
+    <a class="item " href="/docs/device/pins.html" role="menuitem">Pins</a>
+
+
+    <a class="item " href="/docs/device/reactive.html" role="menuitem">Reactive</a>
+
+
+    <a class="item " href="/docs/device/screen.html" role="menuitem">Screen</a>
+
+
+    <a class="item " href="/docs/device/serial.html" role="menuitem">Serial</a>
+
+
+    <a class="item " href="/docs/device/servo.html" role="menuitem">Servo</a>
+
+
+    <a class="item " href="/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/docs/device/usb.html" role="menuitem">Usb</a>
+
+
+    <a class="item " href="/docs/hidflash.html" role="menuitem">Flashing via HID (CMSIS-DAP)</a>
+
+        </div>
+    </div>
+
+
+
+    <a href="/docs/.html" class="header item">
+        Published by Microsoft
+    </a>
+</div>
+
+<div class="ui fixed accent borderless inverted main menu hideprint">
+  <div class="ui container">
+    
+            <a id="togglesidebar" class="launch icon item" tabindex="0" title="Side menu" aria-label="Side menu" role="menu" aria-expanded="false">
+                <i class="content icon"></i>
+            </a>
+        
+
+    <div class="item">
+        
+    </div>
+    
+    <div class="right menu">
+        <a href="/docs/.html" class="header item" tabindex="0" title="Go to editor">
+            <img aria-hidden="true" role="presentation" class="ui mini image" src="data:image/svg+xml;base64,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" />
+        </a>
+    </div>
+  </div>
+</div>
+<!-- end include tocheader.html -->
+
+
+<div class="pusher">
+
+<div class="full height">
+
+    
+<!-- include toc.html -->
+<div class="toc ui accent inverted hideprint">
+    <div class="ui vertical accent inverted sticky menu tocmenu">
+        <div class="item">
+            <a href="/docs/.html" class="header focused" tabindex="0" title="Go to editor">
+                <img aria-hidden="true" role="presentation" class="ui mini image" src="data:image/svg+xml;base64,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" />
+            </a>
+            &nbsp; &nbsp;
+            Documentation
+        </div>
+        <div class="item">
+            <form id="tocsearch2" role="form" method="get" target="_blank" action="https://www.bing.com/search">
+                <div class="ui fluid icon input">
+                    <input type="hidden" name="q1" value="site:https://makecode.microbit.org/" />
+                    
+                <input type="search" name="q" placeholder="Search..." aria-label="Search Documentation">
+                <i onclick="document.getElementById('tocsearch2').submit();" tabindex="0" class="search link icon" aria-label="Search" role="button"></i>
+            
+                </div>
+            </form>
+        </div>
+        <!-- TOC Menu -->
+        
+    <a class="item " href="https://support.microbit.org/" role="menuitem">Support</a>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/projects.html" role="menu">Projects</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/projects/flashing-heart.html" role="menuitem">Flashing heart</a>
+
+
+    <a class="item " href="/docs/projects/smiley-buttons.html" role="menuitem">Smiley buttons</a>
+
+
+    <a class="item " href="/docs/projects/love-meter.html" role="menuitem">Love meter</a>
+
+
+    <a class="item " href="/docs/projects/rock-paper-scissors.html" role="menuitem">Rock paper scissors</a>
+
+
+    <a class="item " href="/docs/projects/magic-button-trick.html" role="menuitem">Magic button trick</a>
+
+
+    <a class="item " href="/docs/projects/coin-flipper.html" role="menuitem">Coin Flipper</a>
+
+
+    <a class="item " href="/docs/projects/hack-your-headphones.html" role="menuitem">Hack your headphones</a>
+
+
+    <a class="item " href="/docs/projects/banana-keyboard.html" role="menuitem">Banana keyboard</a>
+
+
+    <a class="item " href="/docs/projects/guitar.html" role="menuitem">Guitar</a>
+
+
+    <a class="item " href="/docs/projects/wallet.html" role="menuitem">Duct tape wallet</a>
+
+
+    <a class="item " href="/docs/projects/watch.html" role="menuitem">Watch</a>
+
+
+    <a class="item " href="/docs/projects/soil-moisture.html" role="menuitem">Soil Moisture</a>
+
+
+    <a class="item " href="/docs/projects/plant-watering.html" role="menuitem">Plant Watering</a>
+
+
+    <a class="item " href="/docs/projects/reaction-time.html" role="menuitem">Reaction Time</a>
+
+
+    <a class="item " href="/docs/projects/states-of-matter.html" role="menuitem">States of Matter</a>
+
+
+    <a class="item " href="/docs/projects/hot-or-cold.html" role="menuitem">Hot Or Cold</a>
+
+
+    <a class="item " href="/docs/projects/voting-machine.html" role="menuitem">Voting Machine</a>
+
+
+    <a class="item " href="/docs/projects/infection.html" role="menuitem">Infection</a>
+
+
+    <a class="item " href="/docs/projects/fireflies.html" role="menuitem">Fireflies</a>
+
+
+    <a class="item " href="/docs/projects/rps-teams.html" role="menuitem">Rock Paper Scissors Teams</a>
+
+
+    <a class="item " href="/docs/projects/inchworm.html" role="menuitem">Inchworm</a>
+
+
+    <a class="item " href="/docs/projects/milk-carton-robot.html" role="menuitem">Milk Carton Robot</a>
+
+
+    <a class="item " href="/docs/projects/milky-monster.html" role="menuitem">Milk monster</a>
+
+
+    <a class="item " href="/docs/projects/rc-car.html" role="menuitem">RC Car</a>
+
+
+    <a class="item " href="/docs/projects/timing-gates.html" role="menuitem">Timing gates</a>
+
+
+    <a class="item " href="/docs/projects/compass.html" role="menuitem">Compass</a>
+
+
+    <a class="item " href="/docs/projects/telegraph.html" role="menuitem">Telegraph</a>
+
+
+    <a class="item " href="/docs/projects/railway-crossing.html" role="menuitem">Railway Crossing</a>
+
+
+    <a class="item " href="/docs/projects/karel.html" role="menuitem">Karel</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/examples.html" role="menu">Examples</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/examples/blinky.html" role="menuitem">Blinky</a>
+
+
+    <a class="item " href="/docs/examples/name-tag.html" role="menuitem">Name tag</a>
+
+
+    <a class="item " href="/docs/examples/rando.html" role="menuitem">Rando</a>
+
+
+    <a class="item " href="/docs/examples/plot-acceleration.html" role="menuitem">Plot acceleration</a>
+
+
+    <a class="item " href="/docs/examples/plot-light-level.html" role="menuitem">Plot light level</a>
+
+
+    <a class="item " href="/docs/examples/plot-analog-pin.html" role="menuitem">Plot analog pin</a>
+
+
+    <a class="item " href="/docs/examples/servo-calibrator.html" role="menuitem">Servo Calibrator</a>
+
+
+    <a class="item " href="/docs/examples/gameofLife.html" role="menuitem">Game of Life</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/courses.html" role="menu">Courses</a>
+        <div class="menu">
+            
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro.html">CS Intro</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/about.html" role="menuitem">About</a>
+
+
+    <a class="item " href="/docs/courses/csintro/introduction.html" role="menuitem">Introduction</a>
+
+
+    <a class="item " href="/docs/courses/csintro/references.html" role="menuitem">References</a>
+
+
+    <a class="item " href="/docs/courses/csintro/acknowledgements.html" role="menuitem">Acknowledgements</a>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/making.html">Making</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/making/introduction.html" role="menuitem">Introduction</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/activity.html" role="menuitem">Walkthrough</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/making/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/algorithms.html">Algorithms</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/algorithms/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/algorithms/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/variables/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/variables/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/conditionals.html">Conditionals</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/conditionals/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/conditionals/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/iteration.html">Iteration</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/iteration/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/iteration/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/miniproject.html">Mini-project</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/miniproject/review.html" role="menuitem">Review</a>
+
+
+    <a class="item " href="/docs/courses/csintro/miniproject/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/miniproject/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/miniproject/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/coordinates.html">Coordinates</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/coordinates/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/coordinates/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/booleans.html">Booleans</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/booleans/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/booleans/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/binary.html">Binary</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/binary/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/binary/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/radio.html">Radio</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/radio/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/radio/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/arrays.html">Arrays</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/arrays/overview.html" role="menuitem">Overview</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/unplugged.html" role="menuitem">Unplugged</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/activity.html" role="menuitem">Activity</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/arrays/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+
+    <div class="inverted accordion item visible" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/courses/csintro/finalproject.html">Final Project</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/courses/csintro/finalproject/review.html" role="menuitem">Review</a>
+
+
+    <a class="item " href="/docs/courses/csintro/finalproject/project.html" role="menuitem">Project</a>
+
+
+    <a class="item " href="/docs/courses/csintro/finalproject/examples.html" role="menuitem">Examples</a>
+
+
+    <a class="item " href="/docs/courses/csintro/finalproject/standards.html" role="menuitem">Standards</a>
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/reference.html" role="menu">Reference</a>
+        <div class="menu">
+            
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/basic.html">Basic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/basic/show-number.html" role="menuitem">show number</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-icon.html" role="menuitem">show icon</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-leds.html" role="menuitem">show leds</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-string.html" role="menuitem">show string</a>
+
+
+    <a class="item " href="/docs/reference/basic/clear-screen.html" role="menuitem">clear screen</a>
+
+
+    <a class="item " href="/docs/reference/basic/forever.html" role="menuitem">forever</a>
+
+
+    <a class="item " href="/docs/reference/basic/pause.html" role="menuitem">pause</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-arrow.html" role="menuitem">show arrow</a>
+
+
+    <a class="item " href="/docs/reference/basic/show-animation.html" role="menuitem">show animation</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/input.html">Input</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/input/on-button-pressed.html" role="menuitem">on button pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/on-gesture.html" role="menuitem">on gesture</a>
+
+
+    <a class="item " href="/docs/reference/input/on-pin-pressed.html" role="menuitem">on pin pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/button-is-pressed.html" role="menuitem">button is pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/compass-heading.html" role="menuitem">compass heading</a>
+
+
+    <a class="item " href="/docs/reference/input/pin-is-pressed.html" role="menuitem">pin is pressed</a>
+
+
+    <a class="item " href="/docs/reference/input/temperature.html" role="menuitem">temperature</a>
+
+
+    <a class="item " href="/docs/reference/input/acceleration.html" role="menuitem">acceleration</a>
+
+
+    <a class="item " href="/docs/reference/input/light-level.html" role="menuitem">light level</a>
+
+
+    <a class="item " href="/docs/reference/input/rotation.html" role="menuitem">rotation</a>
+
+
+    <a class="item " href="/docs/reference/input/magnetic-force.html" role="menuitem">magnetic force</a>
+
+
+    <a class="item " href="/docs/reference/input/running-time.html" role="menuitem">running time</a>
+
+
+    <a class="item " href="/docs/reference/input/set-accelerometer-range.html" role="menuitem">set accelerometer range</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/music.html">Music</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/music/play-tone.html" role="menuitem">play tone</a>
+
+
+    <a class="item " href="/docs/reference/music/ring-tone.html" role="menuitem">ring tone</a>
+
+
+    <a class="item " href="/docs/reference/music/rest.html" role="menuitem">rest</a>
+
+
+    <a class="item " href="/docs/reference/music/beat.html" role="menuitem">beat</a>
+
+
+    <a class="item " href="/docs/reference/music/tempo.html" role="menuitem">tempo</a>
+
+
+    <a class="item " href="/docs/reference/music/change-tempo-by.html" role="menuitem">change tempo by</a>
+
+
+    <a class="item " href="/docs/reference/music/set-tempo.html" role="menuitem">set tempo</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/led.html">Led</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/led/plot.html" role="menuitem">plot</a>
+
+
+    <a class="item " href="/docs/reference/led/unplot.html" role="menuitem">unplot</a>
+
+
+    <a class="item " href="/docs/reference/led/point.html" role="menuitem">point</a>
+
+
+    <a class="item " href="/docs/reference/led/toggle.html" role="menuitem">toggle</a>
+
+
+    <a class="item " href="/docs/reference/led/brightness.html" role="menuitem">brightness</a>
+
+
+    <a class="item " href="/docs/reference/led/set-brightness.html" role="menuitem">set brightness</a>
+
+
+    <a class="item " href="/docs/reference/led/stop-animation.html" role="menuitem">stop animation</a>
+
+
+    <a class="item " href="/docs/reference/led/plot-bar-graph.html" role="menuitem">plot bar graph</a>
+
+
+    <a class="item " href="/docs/reference/led/enable.html" role="menuitem">enable</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/radio.html">Radio</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/radio/send-number.html" role="menuitem">send number</a>
+
+
+    <a class="item " href="/docs/reference/radio/send-value.html" role="menuitem">send value</a>
+
+
+    <a class="item " href="/docs/reference/radio/send-string.html" role="menuitem">send string</a>
+
+
+    <a class="item " href="/docs/reference/radio/on-data-packet-received.html" role="menuitem">on data packet received</a>
+
+
+    <a class="item " href="/docs/reference/radio/set-group.html" role="menuitem">set group</a>
+
+
+    <a class="item " href="/docs/reference/radio/set-transmit-power.html" role="menuitem">set transmit power</a>
+
+
+    <a class="item " href="/docs/reference/radio/set-transmit-serial-number.html" role="menuitem">set transmit serial number</a>
+
+
+    <a class="item " href="/docs/reference/radio/write-received-packet-to-serial.html" role="menuitem">write received packet to serial</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/game.html">Game</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/game/create-sprite.html" role="menuitem">create sprite</a>
+
+
+    <a class="item " href="/docs/reference/game/delete.html" role="menuitem">delete</a>
+
+
+    <a class="item " href="/docs/reference/game/move.html" role="menuitem">move</a>
+
+
+    <a class="item " href="/docs/reference/game/turn.html" role="menuitem">turn</a>
+
+
+    <a class="item " href="/docs/reference/game/if-on-edge-bounce.html" role="menuitem">in on edge bounce</a>
+
+
+    <a class="item " href="/docs/reference/game/get.html" role="menuitem">get</a>
+
+
+    <a class="item " href="/docs/reference/game/set.html" role="menuitem">set</a>
+
+
+    <a class="item " href="/docs/reference/game/change.html" role="menuitem">change</a>
+
+
+    <a class="item " href="/docs/reference/game/is-touching.html" role="menuitem">is touching</a>
+
+
+    <a class="item " href="/docs/reference/game/is-touching-edge.html" role="menuitem">is touching edge</a>
+
+
+    <a class="item " href="/docs/reference/game/add-score.html" role="menuitem">add score</a>
+
+
+    <a class="item " href="/docs/reference/game/score.html" role="menuitem">score</a>
+
+
+    <a class="item " href="/docs/reference/game/set-score.html" role="menuitem">set score</a>
+
+
+    <a class="item " href="/docs/reference/game/start-countdown.html" role="menuitem">start countdown</a>
+
+
+    <a class="item " href="/docs/reference/game/game-over.html" role="menuitem">game over</a>
+
+
+    <a class="item " href="/docs/reference/game/pause.html" role="menuitem">pause</a>
+
+
+    <a class="item " href="/docs/reference/game/resume.html" role="menuitem">resume</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/images.html">Images</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/images/create-image.html" role="menuitem">create image</a>
+
+
+    <a class="item " href="/docs/reference/images/create-big-image.html" role="menuitem">create big image</a>
+
+
+    <a class="item " href="/docs/reference/images/show-image.html" role="menuitem">show image</a>
+
+
+    <a class="item " href="/docs/reference/images/scroll-image.html" role="menuitem">scroll image</a>
+
+
+    <a class="item " href="/docs/reference/images/arrow-image.html" role="menuitem">arrow image</a>
+
+
+    <a class="item " href="/docs/reference/images/icon-image.html" role="menuitem">icon image</a>
+
+
+    <a class="item " href="/docs/reference/images/arrow-number.html" role="menuitem">arrow number</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/pins.html">Pins</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/pins/digital-read-pin.html" role="menuitem">digital read pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/digital-write-pin.html" role="menuitem">digital write pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-read-pin.html" role="menuitem">analog read pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-write-pin.html" role="menuitem">analog write pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-set-period.html" role="menuitem">analog set period</a>
+
+
+    <a class="item " href="/docs/reference/pins/map.html" role="menuitem">map</a>
+
+
+    <a class="item " href="/docs/reference/pins/on-pulsed.html" role="menuitem">on pulsed</a>
+
+
+    <a class="item " href="/docs/reference/pins/pulse-duration.html" role="menuitem">pulse duration</a>
+
+
+    <a class="item " href="/docs/reference/pins/pulse-in.html" role="menuitem">pulse in</a>
+
+
+    <a class="item " href="/docs/reference/pins/servo-write-pin.html" role="menuitem">servo write pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/servo-set-pulse.html" role="menuitem">servo set pulse</a>
+
+
+    <a class="item " href="/docs/reference/pins/i2c-read-number.html" role="menuitem">i2c read number</a>
+
+
+    <a class="item " href="/docs/reference/pins/i2c-write-number.html" role="menuitem">i2c write number</a>
+
+
+    <a class="item " href="/docs/reference/pins/set-pull.html" role="menuitem">set pull</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-pitch.html" role="menuitem">analog pitch</a>
+
+
+    <a class="item " href="/docs/reference/pins/analog-set-pitch-pin.html" role="menuitem">analog set pitch pin</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-write.html" role="menuitem">spi write</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-pins.html" role="menuitem">spi Pins</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-format.html" role="menuitem">spi format</a>
+
+
+    <a class="item " href="/docs/reference/pins/spi-frequency.html" role="menuitem">spi frequency</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/serial.html">Serial</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/serial/write-line.html" role="menuitem">write line</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-number.html" role="menuitem">write number</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-value.html" role="menuitem">write value</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-string.html" role="menuitem">write string</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-until.html" role="menuitem">read until</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-line.html" role="menuitem">read line</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-string.html" role="menuitem">read string</a>
+
+
+    <a class="item " href="/docs/reference/serial/on-data-received.html" role="menuitem">on data received</a>
+
+
+    <a class="item " href="/docs/reference/serial/redirect-to.html" role="menuitem">redirect</a>
+
+
+    <a class="item " href="/docs/reference/serial/write-buffer.html" role="menuitem">write buffer</a>
+
+
+    <a class="item " href="/docs/reference/serial/read-buffer.html" role="menuitem">read buffer</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/control.html">Control</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/control/in-background.html" role="menuitem">in background</a>
+
+
+    <a class="item " href="/docs/reference/control/reset.html" role="menuitem">reset</a>
+
+
+    <a class="item " href="/docs/reference/control/wait-micros.html" role="menuitem">wait micros</a>
+
+
+    <a class="item " href="/docs/reference/control/on-event.html" role="menuitem">on event</a>
+
+
+    <a class="item " href="/docs/reference/control/raise-event.html" role="menuitem">raise event</a>
+
+
+    <a class="item " href="/docs/reference/control/event-timestamp.html" role="menuitem">event timestamp</a>
+
+
+    <a class="item " href="/docs/reference/control/event-value.html" role="menuitem">event value</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/bluetooth.html">Bluetooth</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="" role="menuitem"></a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/bluetooth-pairing.html" role="menuitem">Pairing</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/on-bluetooth-connected.html" role="menuitem">on bluetooth connected</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/on-bluetooth-disconnected.html" role="menuitem">on bluetooth disconnected</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-accelerometer-service.html" role="menuitem">start accelerometer service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-button-service.html" role="menuitem">start button service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-io-pin-service.html" role="menuitem">start io pin service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-led-service.html" role="menuitem">start led service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-magnetometer-service.html" role="menuitem">start magnetometer service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-temperature-service.html" role="menuitem">start temperature service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/start-uart-service.html" role="menuitem">start uart service</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-read-until.html" role="menuitem">uart read until</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-write-string.html" role="menuitem">uart write string</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-write-number.html" role="menuitem">uart write number</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/uart-write-value.html" role="menuitem">uart write value</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/advertise-url.html" role="menuitem">advertise url</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/stop-advertising.html" role="menuitem">stop advertising</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/advertise-uid.html" role="menuitem">advertise uid</a>
+
+
+    <a class="item " href="/docs/reference/bluetooth/advertise-uid-buffer.html" role="menuitem">advertise-uid-buffer</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/reference/devices.html">Devices</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/reference/devices/tell-camera-to.html" role="menuitem">tell camera to</a>
+
+
+    <a class="item " href="/docs/reference/devices/tell-remote-control-to.html" role="menuitem">tell remote control to</a>
+
+
+    <a class="item " href="/docs/reference/devices/raise-alert-to.html" role="menuitem">raise alert to</a>
+
+
+    <a class="item " href="/docs/reference/devices/on-notified.html" role="menuitem">on notified</a>
+
+
+    <a class="item " href="/docs/reference/devices/on-gamepad-button.html" role="menuitem">on gamepad button</a>
+
+
+    <a class="item " href="/docs/reference/devices/signal-strength.html" role="menuitem">signal strength</a>
+
+
+    <a class="item " href="/docs/reference/devices/on-signal-strength-changed.html" role="menuitem">on signal strength changed</a>
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/packages.html" role="menu">Packages</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/pkg/microsoft/pxt-neopixel.html" role="menuitem">NeoPixel</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-filesystem.html" role="menuitem">File System</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-sonar.html" role="menuitem">Sonar</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-bluetooth-temperature-sensor.html" role="menuitem">Bluetooth Temperature Sensor</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-max6675.html" role="menuitem">MAX6675</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-bluetooth-max6675.html" role="menuitem">Bluetooth MAX6675</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-midi.html" role="menuitem">MIDI</a>
+
+
+    <a class="item " href="/docs/pkg/microsoft/pxt-bluetooth-midi.html" role="menuitem">Bluetooth MIDI</a>
+
+
+    <a class="item " href="/docs/pkg/CoderDojoOlney/pxt-olney.html" role="menuitem">Code Dojo Olney</a>
+
+
+    <a class="item " href="/docs/pkg/chevyng/pxt-ucl-junkrobot.html" role="menuitem">UCL Junk Robot</a>
+
+
+    <a class="item " href="/docs/pkg/srs/pxt-bitbot.html" role="menuitem">SRS BitBot</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/blocks.html" role="menu">Blocks</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/blocks/on-start.html" role="menuitem">On Start</a>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/blocks/loops.html">Loops</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/blocks/loops/repeat.html" role="menuitem">repeat</a>
+
+
+    <a class="item " href="/docs/blocks/loops/for.html" role="menuitem">for</a>
+
+
+    <a class="item " href="/docs/blocks/loops/while.html" role="menuitem">while</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/blocks/logic.html">Logic</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/blocks/logic/if.html" role="menuitem">if</a>
+
+
+    <a class="item " href="/docs/blocks/logic/boolean.html" role="menuitem">Boolean</a>
+
+        </div>
+    </div>
+
+
+    <div class="ui inverted accordion item visible" role="tree" title="">
+        <div class=" title">
+            <i class="dropdown icon"></i>
+            <a class="header" role="treeitem" aria-expanded="false" href="/docs/blocks/variables.html">Variables</a>
+        </div>
+        <div class=" content">
+            
+    <a class="item " href="/docs/blocks/variables/assign.html" role="menuitem">assign</a>
+
+
+    <a class="item " href="/docs/blocks/variables/change.html" role="menuitem">change var</a>
+
+
+    <a class="item " href="/docs/blocks/variables/var.html" role="menuitem">var</a>
+
+        </div>
+    </div>
+
+
+    <a class="item " href="/docs/blocks/math.html" role="menuitem">Math</a>
+
+
+    <a class="item " href="/docs/blocks/javascript-blocks.html" role="menuitem">JavaScript blocks</a>
+
+
+    <a class="item " href="/docs/blocks/custom.html" role="menuitem">Custom blocks</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/javascript.html" role="menu">JavaScript</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/javascript/call.html" role="menuitem">Calling</a>
+
+
+    <a class="item " href="/docs/javascript/sequence.html" role="menuitem">Sequencing</a>
+
+
+    <a class="item " href="/docs/javascript/variables.html" role="menuitem">Variables</a>
+
+
+    <a class="item " href="/docs/javascript/operators.html" role="menuitem">Operators</a>
+
+
+    <a class="item " href="/docs/javascript/statements.html" role="menuitem">Statements</a>
+
+
+    <a class="item " href="/docs/javascript/functions.html" role="menuitem">Functions</a>
+
+
+    <a class="item " href="/docs/javascript/types.html" role="menuitem">Types</a>
+
+
+    <a class="item " href="/docs/javascript/classes.html" role="menuitem">Classes</a>
+
+
+    <a class="item " href="/docs/javascript/interfaces.html" role="menuitem">Interfaces</a>
+
+
+    <a class="item " href="/docs/javascript/generics.html" role="menuitem">Generics</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/types.html" role="menu">Types</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/types/number.html" role="menuitem">Number</a>
+
+
+    <a class="item " href="/docs/types/string.html" role="menuitem">String</a>
+
+
+    <a class="item " href="/docs/types/boolean.html" role="menuitem">Boolean</a>
+
+
+    <a class="item " href="/docs/types/array.html" role="menuitem">Array</a>
+
+
+    <a class="item " href="/docs/types/function.html" role="menuitem">Function</a>
+
+        </div>
+    </div>
+
+
+    <div class="item" title="">
+        <a class="header " href="/docs/device.html" role="menu">Hardware</a>
+        <div class="menu">
+            
+    <a class="item " href="/docs/device/error-codes.html" role="menuitem">Error codes</a>
+
+
+    <a class="item " href="/docs/device/foil-circuits.html" role="menuitem">Foil circuits</a>
+
+
+    <a class="item " href="/docs/device/mes-events.html" role="menuitem">MES events</a>
+
+
+    <a class="item " href="/docs/device/pins.html" role="menuitem">Pins</a>
+
+
+    <a class="item " href="/docs/device/reactive.html" role="menuitem">Reactive</a>
+
+
+    <a class="item " href="/docs/device/screen.html" role="menuitem">Screen</a>
+
+
+    <a class="item " href="/docs/device/serial.html" role="menuitem">Serial</a>
+
+
+    <a class="item " href="/docs/device/servo.html" role="menuitem">Servo</a>
+
+
+    <a class="item " href="/docs/device/simulator.html" role="menuitem">Simulator</a>
+
+
+    <a class="item " href="/docs/device/usb.html" role="menuitem">Usb</a>
+
+
+    <a class="item " href="/docs/hidflash.html" role="menuitem">Flashing via HID (CMSIS-DAP)</a>
+
+        </div>
+    </div>
+
+
+
+        <a href="/docs/.html" class="header item">
+            Published by Microsoft
+        </a>
+    </div>
+</div>
+<!-- end include toc.html -->
+
+    
+    <div class="article" id="maincontent">
+        
+        
+<!-- include header.html -->
+<div class="ui secondary borderless menu hideprint">
+    <div class="ui item"> 
+        
+    </div>
+</div>
+
+<!-- end include header.html -->
+
+
+        <div id="docs" class="main ui container mainbody">
+            
+            <button id="printbtn" class="circular ui icon right floated button hideprint" title="Print this page">
+                <i class="icon print"></i>
+            </button>
+        
+            
+    <div class="ui text">
+        <h1 id="making-the-guitar-body">Making the Guitar Body</h1><!-- desc -->
+    <div class='avatar avatar'>
+        <div class='avatar-image'></div>
+        <div class='ui compact message'>
+            <p>Make the Guitar Body for your micro:bit Guitar</p>
+
+        </div>
+    </div>
+<h2 id="duration-45-minutes">Duration: ~45 minutes</h2><h2 id="materials">Materials</h2><ul>
+<li>Cardboard large pieces (recycle!)</li>
+<li>Tape (masking, duct tape, and/or packing tape)</li>
+<li>Scissors that can cut cardboard</li>
+<li>Markers and/or paint</li>
+</ul>
+<p><img class="ui image" src="/static/mb/projects/guitar/materials.jpg" alt="Materials: cardboard, tape, scissors, markers"></p>
+<h2 id="step-1-design-the-body">Step 1: Design the body</h2><p><em>tracing the guitar design</em></p>
+
+<div class="ui grid">
+<div class="ten wide column">
+    <div class="ui embed mdvid" data-source="youtube" data-id="xMSrWaOZkFg" data-placeholder="https://img.youtube.com/vi/xMSrWaOZkFg/maxresdefault.jpg">
+    </div>
+</div></div>
+<ul>
+<li>Search for <a href="https://www.bing.com/images/search?q=Guitar+Silhouettes">Guitar Silhouette</a> design ideas and customize
+the shape of your guitar</li>
+<li>Trace the design on a flat piece of cardboard (40-80 cm is best)</li>
+</ul>
+
+    <div class="ui info message">
+        <div class="content">
+            <ul>
+<li>Avoid small details that are difficult to cut into cardboard</li>
+<li>Unfolding a box gives longer pieces of cardboard and creases can be reinforced</li>
+</ul>
+
+        </div>
+    </div>
+<h2 id="step-2-cut-out-the-body">Step 2: Cut out the body</h2><p><em>cutting the cardboard</em></p>
+
+<div class="ui grid">
+<div class="ten wide column">
+    <div class="ui embed mdvid" data-source="youtube" data-id="aUQkrFoEank" data-placeholder="https://img.youtube.com/vi/aUQkrFoEank/maxresdefault.jpg">
+    </div>
+</div></div>
+<h2 id="step-3-personalize-the-guitar">Step 3: Personalize the Guitar</h2><p>Create unique styles using tape, markers, paint and other available materials (<em>calling all artists!</em>)</p>
+<p><em>decorating the guitar</em></p>
+
+<div class="ui grid">
+<div class="ten wide column">
+    <div class="ui embed mdvid" data-source="youtube" data-id="zNAZTJeSxY8" data-placeholder="https://img.youtube.com/vi/zNAZTJeSxY8/maxresdefault.jpg">
+    </div>
+</div></div>
+<p>Everyone can come up with a unique design!</p>
+<p><img class="ui image" src="/static/mb/projects/guitar/otherdesigns.jpg" alt="guitar design samples"></p>
+<h2 id="extra-">Extra!</h2><p><em>strengthening the guitar</em></p>
+
+<div class="ui grid">
+<div class="ten wide column">
+    <div class="ui embed mdvid" data-source="youtube" data-id="q0GkQdJmxjE" data-placeholder="https://img.youtube.com/vi/q0GkQdJmxjE/maxresdefault.jpg">
+    </div>
+</div></div>
+<p>Strengthen the guitar next with an angled cardboard strip (<em>optional</em>).</p>
+
+   <a class="ui primary button docbutton" href="/docs/projects/guitar/displaybuttons.html"><p>NEXT: Buttons, Display and Sound</p>
+</a>
+
+    </div>
+
+            <div class="hideprint"></div>
+        </div>
+
+        <div class="hideprint">
+            
+            
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<!-- include footer.html -->
+    <footer class="ui inverted accent vertical footer segment hideprint" aria-hidden="false">
+        <div class="ui center aligned container">
+            <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="https://makecode.com/" title="Microsoft MakeCode" target="_blank" rel="noopener">Powered by Microsoft MakeCode</a>
+                <!-- <a class="item" href="https://makecode.com/contact" target="_blank" rel="noopener">Contact Us</a> -->
+                <a class="item" href="https://makecode.com/privacy" target="_blank" rel="noopener">Privacy &amp; Cookies</a>
+                <a class="item" href="https://makecode.com/termsofuse" target="_blank" rel="noopener"> Terms Of Use</a>
+                <a class="item" href="https://makecode.com/trademarks" target="_blank" rel="noopener">Trademarks</a>
+                <div class="item">© 2017 Microsoft</div>
+                <!-- we need to force the browser to load this font -->
+                <div style='font-family: Icons; color: #010101;' aria-hidden="true">.</div>
+            </div>
+            <a class="item" href="https://www.microsoft.com/" target="_blank" rel="noopener" aria-label="Microsoft Home Page"><img class="ui centered image" src="https://az851932.vo.msecnd.net/pub/pmapoirq" /></a>
+        </div>
+    </footer>
+
+<!-- end include footer.html -->
+
+
+
+<!-- include macros.html -->
+<!-- macro button -->
+
+<!-- macro vimeo -->
+
+<!-- macro youtube -->
+
+<!-- macro section -->
+
+<!-- macro hide -->
+
+<!-- macro avatar -->
+
+<!-- macro hint -->
+
+<!-- wrapped around ordinary content -->
+<!-- macro main-container -->
+
+<!-- used for 'column' box - they are collected and wrapped in 'column-container' -->
+<!-- macro column -->
+<!-- macro column-container -->
+
+
+<!-- Menu on the top of the page -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro top-dropdown -->
+
+<!-- macro inner-dropdown -->
+
+
+<!-- TOC in the sidebar -->
+<!-- macro item -->
+
+<!-- macro divider -->
+
+<!-- macro top-dropdown -->
+
+<!-- macro top-dropdown-noheading -->
+
+<!-- macro inner-dropdown -->
+
+<!-- macro nested-dropdown -->
+
+<!-- end include macros.html -->
+
+
+<!-- include tracking.html -->
+<script type="text/javascript">
+    var appInsights=window.appInsights||function(config){
+        function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+    }({    
+        instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
+        disableAjaxTracking: true,
+        overridePageViewDuration: false,
+        disableExceptionTracking: true,
+        isCookieUseDisabled: true,
+        isStorageUseDisabled: true
+    });
+    window.appInsights=appInsights;
+    appInsights.queue.push(function () {
+        appInsights.context.addTelemetryInitializer(function (envelope) {
+            if (typeof pxtConfig === "undefined") return;            
+            var telemetryItem = envelope.data.baseData;
+            telemetryItem.properties = telemetryItem.properties || {};
+            telemetryItem.properties["target"] = pxtConfig.targetId;
+            telemetryItem.properties["version"] = pxtConfig.targetVersion; 
+            telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
+            if (typeof window !== "undefined" && window.location && /[?&]electron=1/i.test(window.location.href))
+                telemetryItem.properties["electron"] = 1;
+            if (typeof Windows !== "undefined")
+                telemetryItem.properties["WindowsApp"] = 1;
+        });
+    });
+    appInsights.trackPageView(null, null, {urlReferrer: document.referrer});
+</script>
+<!-- end include tracking.html -->
+
+
+</body>
+
+</html>

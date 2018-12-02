@@ -1,0 +1,21 @@
+{
+  "name": "electron-pxt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "electron-packager .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-packager": "^12.2.0"
+  },
+  "homepage": "./",
+  "dependencies": {
+    "electron-serve": "^0.2.0"
+  }
+}
