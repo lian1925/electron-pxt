@@ -20,3 +20,7 @@ npm run build
 ```
 
 稍等片刻，在工程目录生成打包成功的桌面应用
+
+## 效果
+
+![](/images/microbit-page.jpeg)
