@@ -1,10 +1,10 @@
-# react-pxt
+# Electron-pxt
 
 提供简单的 electron 工程，实现将 microbit 应用打包成桌面应用
 
 注： This project is just a gift for friend LiChao.
 
-## ready
+## Ready
 
 1、克隆本项目
 
